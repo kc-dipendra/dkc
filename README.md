@@ -1,10 +1,12 @@
 Title: Student Management System
 
 Django Link: http://127.0.0.1:8000/
-Git-hub Repository: https://github.com/kc-dipendra/portfolioproject.git
+Git-hub Repository: https://github.com/kc-dipendra/portfolioproject
+Youtube Video Link: https://www.youtube.com/watch?v=ssEfymnamdc
+Website: https://kcdipendra.pythonanywhere.com/ 
 
 **Description**: 
-The student management system has been created using Python & Django. For the database, I am using 'SQLite'. It is a web-based program which gives user an interacive menus.
+The student management system has been created using Python & Django. For the database, I am using 'SQLite'. It is a web-based program which gives user an interacive menus. In order to deploy this in the cloud, I convert the SQLite database into MySQL database.
 
 **Instruction to start**
 From the terminal, locate your project folder, where your ‘manage.py’ is located.

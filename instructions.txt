@@ -1,0 +1,57 @@
+http://dipendrakc.pythonanywhere.com/
+https://kcdipendra.pythonanywhere.com/
+
+Proces:
+Step1: Create a account in ‘pythonanwhere.com’
+Step2: In the Console, type ‘git clone https://github.com/kc-dipendra/dkc'
+Step 3: Type ‘mkvirtualenv —python=/usr/bin/python3.9 venv’ 
+Step 4: Enter into your project folder where ‘requirements.txt’ file is there
+Step 5: Type ‘pip install -r requirements.txt’
+
+Edit the ‘settings.py’ file, below static, add ‘STATIC_ROOT = ‘/home/dipendrakc/dkc/static’
+
+After the modification, to update the git-hub repository:
+git add .
+git commit -m “update“
+git push -u origin main
+
+To update the requirements.txt:
+pip freeze > requirements.txt
+
+After editing settings.py file
+Bash terminal:
+python3 manage.py collectstatic
+
+Database:
+Inside ‘Pythonanywhere.com’, 
+Create a database
+Database name: mysqldb
+password> password
+Set mysql password
+
+How to migrate Sqlite database to Mysql
+1. pip install mysqlclient
+2. python3 manage.py dumpdata > mydb.json
+3. In ‘settings.py’, change the database as per below
+DATABASES = {
+‘Default : {
+‘       'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'kcdipendra$default',
+        'USER': 'kcdipendra',
+        'PASSWORD': 'Pokhara061@',
+        'HOST': 'kcdipendra.mysql.pythonanywhere-services.com',
+        'PORT': '3306',
+
+5. python3 manage.py migrate —run-syncdb
+6. Python3 manage.py shell
+7. from django.contrib.contenttypes.models import ContentType
+8. ContentType.objects.all()
+9. ContentType.objects.all().delete()
+10. quit()
+11. python3 manage.py loaddata mydb.json
+
+pip install python-dotenv
+pip install django
+
+
+
